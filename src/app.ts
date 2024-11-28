@@ -486,14 +486,72 @@ import { extend } from "dayjs";
 // newCar.setDiscount(1000);
 // console.log(newCar.showBill());
 
-// Generic Classes
-class Collection<T> {
-  constructor(private data: T[]) {}
-  addItems(item: T): void {
-    this.data.push(item);
+/////////////////////////////////
+
+// // Generic Classes
+// class Collection<T> {
+//   constructor(private data: T[]) {}
+//   addItems(item: T): void {
+//     this.data.push(item);
+//   }
+// }
+
+// const one = new Collection<string | number>(["a", "b"]);
+// one.addItems(10);
+// console.log(one);
+
+/////////////////////////////////
+
+// Set function
+// const numsSet = new Set<number>();
+// numsSet.add(2);
+// numsSet.add(5);
+// numsSet.add(2);
+// console.log(numsSet);
+
+// //create interface
+// interface Student {
+//   name: string;
+//   score: number;
+// }
+
+// //create obj
+// const stOne: Student = { name: "Malen", score: 100 };
+// const stTwo: Student = { name: "Tina", score: 110 };
+
+// //create set using set function
+// const setStudent = new Set<Student>();
+
+// //add item into set
+// setStudent.add(stOne);
+// setStudent.add(stTwo);
+
+// //create set funtion to display set
+// function printScore(stu: Set<Student>) {
+//   stu.forEach((st) => console.log(st.score));
+// }
+
+// printScore(setStudent);
+
+/////////////////////////////////
+
+//enum
+enum Priority {
+  Low,
+  High,
+  Urgent,
+}
+
+function ticket(problem: string, priority: Priority) {
+  if (priority === Priority.Low) {
+    console.log("Help me when you free");
+  }
+  if (priority === Priority.High) {
+    console.log("Not now but please help at least today");
+  }
+  if (priority === Priority.Urgent) {
+    console.log("Please help right now...");
   }
 }
 
-const one = new Collection<string | number>(["a", "b"]);
-one.addItems(10);
-console.log(one);
+ticket("error code", Priority.Low);
