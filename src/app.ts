@@ -1,6 +1,6 @@
 // Object
 
-import { extend } from "dayjs";
+// import { extend } from "dayjs";
 
 // const user: {
 //   id: number;
@@ -586,11 +586,11 @@ import { extend } from "dayjs";
 
 // // const links = document.querySelectorAll(".link") as NodeListOf<HTMLLIElement>;
 
-// import { JSDOM } from "jsdom";
+import { JSDOM } from "jsdom";
 
-// // Simulate the DOM
-// const dom = new JSDOM(`<!DOCTYPE html><html><body><ul></ul></body></html>`);
-// const document = dom.window.document;
+// Simulate the DOM
+const dom = new JSDOM(`<!DOCTYPE html><html><body><ul></ul></body></html>`);
+const document = dom.window.document;
 
 // // Your existing code
 // const list = document.querySelector("ul")!;
@@ -606,4 +606,12 @@ import { extend } from "dayjs";
 // // Log the updated HTML
 // console.log(document.body.innerHTML);
 
+const form = document.querySelector("form");
+const userName = document.querySelector(".name") as HTMLInputElement;
+const userEmail = document.querySelector(".email") as HTMLInputElement;
 
+form?.addEventListener("submit", (e: Event): void => {
+  e.preventDefault()
+  console.log(userName.value);
+  console.log(userEmail.value);
+});
