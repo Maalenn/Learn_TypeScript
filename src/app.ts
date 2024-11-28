@@ -535,23 +535,75 @@ import { extend } from "dayjs";
 
 /////////////////////////////////
 
-//enum
-enum Priority {
-  Low,
-  High,
-  Urgent,
-}
+// //enum
+// enum Priority {
+//   Low,
+//   High,
+//   Urgent,
+// }
 
-function ticket(problem: string, priority: Priority) {
-  if (priority === Priority.Low) {
-    console.log("Help me when you free");
-  }
-  if (priority === Priority.High) {
-    console.log("Not now but please help at least today");
-  }
-  if (priority === Priority.Urgent) {
-    console.log("Please help right now...");
-  }
-}
+// function ticket(problem: string, priority: Priority) {
+//   if (priority === Priority.Low) {
+//     console.log("Help me when you free");
+//   }
+//   if (priority === Priority.High) {
+//     console.log("Not now but please help at least today");
+//   }
+//   if (priority === Priority.Urgent) {
+//     console.log("Please help right now...");
+//   }
+// }
 
-ticket("error code", Priority.Low);
+// ticket("error code", Priority.Low);
+
+/////////////////////////////
+
+// DOM element
+
+// const link = document.querySelector("a")!;
+// link.href;
+
+// /////////////////////////////
+
+// // Define Element Type
+
+// const link = document.querySelector(".link") as HTMLAnchorElement;
+// link.href;
+
+/////////////////////////////
+
+// NodeList & HTMLCollection
+
+//NodeList
+// const listItems = document.querySelectorAll(
+//   ".link"
+// ) as NodeListOf<HTMLLIElement>;
+
+// //Collection
+// const listAll = document.getElementsByClassName(
+//   ".list-item"
+// ) as HTMLCollectionOf<HTMLLIElement>;
+
+// // const links = document.querySelectorAll(".link") as NodeListOf<HTMLLIElement>;
+
+// import { JSDOM } from "jsdom";
+
+// // Simulate the DOM
+// const dom = new JSDOM(`<!DOCTYPE html><html><body><ul></ul></body></html>`);
+// const document = dom.window.document;
+
+// // Your existing code
+// const list = document.querySelector("ul")!;
+
+// function addListItems(text: string): void {
+//   const LI = document.createElement("li");
+//   LI.append(text);
+//   list.appendChild(LI);
+// }
+
+// addListItems("Hi");
+
+// // Log the updated HTML
+// console.log(document.body.innerHTML);
+
+
